@@ -2,6 +2,7 @@
 
 - name: install nginx and run
   hosts: web
+  become: yes #take sudo/root access we use to give -b for become root  access here we gave like this.
   tasks:
   - name:  nginx install
     ansible.builtin.package:          # ansible is heterogenous module that can work for all distubutors and this module is used to install nginx just like dnf install nginx -y ---> ansible.builtin.package following  name and state is mandatory
