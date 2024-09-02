@@ -1,0 +1,9 @@
+# write aa playbook in ansible to install and run nginx ? interview important
+
+- name: install nginx and run
+  hosts: web
+  tasks:
+   - name: install nginx
+     ansible.builtin.package:          # ansible is heterogenous module that can work for all distubutors and this module is used to install nginx just like dnf install nginx -y ---> ansible.builtin.package following  name and state is mandatory
+     name: nginx
+     state: present          # in state present means(to install) or absent means(to remove)
