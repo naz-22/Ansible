@@ -4,3 +4,10 @@
    - name: PLAY-01 TASK-01
      ansible.builtin.debug:          # "ansible.builtin.debug" is a task/module name used to print a module in ansible just like echo in linux.and if we won't pass anything to print default its print "hello world".
       msg: "this is from PLAY-01 and TASK-01"   # arguments 
+
+- name: play-02
+  hosts: web
+  tasks: 
+   - name: PLAY-02 TASK-01
+     ansible.builtin.debug:          # "ansible.builtin.debug" is a task/module name used to print a module in ansible just like echo in linux.and if we won't pass anything to print default its print "hello world".
+      msg: "this is from PLAY-02 and TASK-01"   # arguments 
