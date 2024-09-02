@@ -1,0 +1,21 @@
+# YAML works on indentation, means space
+- Name: naziya
+  Email: naz221@gmail.com
+  Addresses: #list of addresses
+  - type: perm
+    addressline1: kld road
+    addressline2: st.ann's school
+  - type: current
+    addressline1: kld road
+    addressline2: st.ann's school
+  
+- Name: naziya
+  Email: naz221@gmail.com
+  Addresses: #list of addresses
+  - type: perm
+    addressline1: kld road
+    addressline2: st.ann's school
+  - type: current
+    addressline1: kld road
+    addressline2: st.ann's school
+    

@@ -1,0 +1,5 @@
+- name: ping the server #playbookname
+  hosts: web #which hosts your ansible server want to connect
+  tasks: #list of tasks/modules/collections
+  - name: ping the server   #play1/task1 of playbook
+    ansible.builtin.ping:
