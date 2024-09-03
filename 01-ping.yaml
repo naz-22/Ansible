@@ -1,5 +1,7 @@
 - name: ping the server #playbookname
-  hosts: web #which hosts your ansible server want to connect web is a group name which contains the ip address of the server the ansible is cnncting to.
+  hosts: web #which hosts your ansible server want to connect. web is a group name which contains the ip address of the server the ansible is cnncting to.
+  become: yes
   tasks: #list of tasks/modules/collections
+
   - name: ping the server   #play1/task1 of playbook
-    ansible.builtin.ping:   #module name
+    ansible.builtin.ping:   #module name 
