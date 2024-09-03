@@ -1,23 +1,28 @@
 - name: variables to print
   hosts: web
-  # vars:
-  #   COURSE: "DevOps with AWS from PLAY level"
-  #   DURATION: "120HRS"
-  #   TRAINER: "Sivakumar Reddy M"
-  # vars_files:
-  # - vars.yaml
-  # vars_prompt:
-  # - name: COURSE
-  #   prompt: Please enter the course name
-  #   private: false # not confidential
+  vars:
+    COURSE: "DevOps with AWS from PLAY level"
+    DURATION: "120HRS"
+    TRAINER: "Sivakumar Reddy M"
+  vars_files:
+  - vars.yaml
+  vars_prompt:
+  - name: COURSE
+    prompt: Please enter the course name
+    private: false # not confidential
   tasks:
   - name: print the information
     vars:
-      #COURSE: "DevOps with AWS from TASK level"
+      COURSE: "DevOps with AWS from TASK level"
       DURATION: "120HRS"
       TRAINER: "Sivakumar Reddy M"
     ansible.builtin.debug:
       msg: "Hi, I am learning {{COURSE}}"
+
+
+#cmnd to run
+ #ansible-playbook -b  -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 10-vars-preference.yaml -e "COURSE='DevOps with AWS from args'"
+
 
 #1. command line/args
 #2. Task level
