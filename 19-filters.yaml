@@ -39,14 +39,14 @@
     ansible.builtin.debug:
       msg: "{{ course | dict2items }}" #dict2items is a filter in ansible to convert map into lists.
 
-  # - name: convert list to map
-  #   vars:
-  #     course:
-  #     - { "key": "name","value": "DevOps with AWS" }
-  #     - { "key": "duration","value": 120 }
-  #     - { "key": "trainer","value": "sivakumar reddy" }
-  #   ansible.builtin.debug:
-  #     msg: "{{ course | items2dict }}"
+  - name: convert list to map
+    vars:
+      course:
+      - { "key": "name","value": "DevOps with AWS" }
+      - { "key": "duration","value": 120 }
+      - { "key": "trainer","value": "sivakumar reddy" }
+    ansible.builtin.debug:
+      msg: "{{ course | items2dict }}"      #items2dict is a filter in ansible to convert lists into Map.
 
   # - name: check ip address
   #   vars:
