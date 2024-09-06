@@ -30,14 +30,14 @@
     ansible.builtin.debug:
       msg: " Min: {{ numbers | min }}, Max: {{ numbers | max }}"
 
-  # - name: convert map to list
-  #   vars:
-  #     course:
-  #       name: "DevOps with AWS"
-  #       duration: 120
-  #       trainer: "sivakumar reddy"
-  #   ansible.builtin.debug:
-  #     msg: "{{ course | dict2items }}"
+  - name: convert map to list
+    vars:
+      course:
+        name: "DevOps with AWS"
+        duration: 120
+        trainer: "sivakumar reddy"
+    ansible.builtin.debug:
+      msg: "{{ course | dict2items }}" #dict2items is a filter in ansible to convert map into lists.
 
   # - name: convert list to map
   #   vars:
