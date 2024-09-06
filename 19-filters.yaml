@@ -4,7 +4,7 @@
   tasks:
   - name: print the default variable
     ansible.builtin.debug:
-      msg: "Hello {{ course }}" #| default('Ansible') }}"
+      msg: "Hello {{ course | default('Ansible') }}"  #without the pipeline  and deafultof () it will through undefined variable error if you give just {{ course}}.
   
   # - name: convert to uppercase
   #   vars:
