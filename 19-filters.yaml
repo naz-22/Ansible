@@ -48,8 +48,8 @@
     ansible.builtin.debug:
       msg: "{{ course | items2dict }}"      #items2dict is a filter in ansible to convert lists into Map.
 
-  # - name: check ip address
-  #   vars:
-  #     myip: "356.168.1.1"
-  #   ansible.builtin.debug:
-  #     msg: "{{ myip | ansible.utils.ipv4 }}"
+  - name: check ip address
+    vars:
+      myip: "356.168.1.1"
+    ansible.builtin.debug:
+      msg: "{{ myip | ansible.utils.ipv4 }}"    #ansible.utils.ipv4 is a filter to check your ip is crrect or wrong.
