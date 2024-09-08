@@ -3,4 +3,8 @@
   tasks:
   - name: print the information
     ansible.builtin.debug:
-      msg: "Hello {{NAME}}, Good {{GREETING}}"
+      msg: "Hello {{NAME}}, Good {{GREETING}}" # In command line in server when try to run this playbook args you have to use cmnd like below
+
+  #ansible-playbook -b  -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 09-vars-from-args.yaml -e(--extra-vars/ -e we can use either of this one ) "NAME=Ramesh GREETING=Morning"
+
+ 
